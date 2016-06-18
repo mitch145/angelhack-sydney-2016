@@ -13,11 +13,31 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 	<!-- Plotly.js -->
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<!-- Webcam.js -->
+	<script href="webcam.js"></script>
 	<!-- Javascript Files -->
 	<script src="app.js"></script>
 </head>
 <body ng-app="teleNex" ng-controller="MainController as MainCtrl">
 	<div class="container">
+
+		<div class="row">
+			<div id="results">Your captured image will appear here...</div>
+			
+			<h1>WebcamJS Test Page</h1>
+			<h3>Demonstrates simple 320x240 capture &amp; display</h3>
+			
+			<div id="my_camera"></div>
+			
+			<!-- First, include the Webcam.js JavaScript Library -->
+			<script type="text/javascript" src="../webcam.js"></script>
+			
+			
+			<!-- A button for taking snaps -->
+			<button class="btn btn-default center-block text-center" ng-click="takePhoto()">Take Photo</button
+			
+			
+		</div>
 		<div class="row">
 			<div class="col-xs-12">
 				<h1 class="text-center">teleNex</h1>
