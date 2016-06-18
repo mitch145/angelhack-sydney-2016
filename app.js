@@ -65,12 +65,27 @@ teleNex.controller("MainController", function($scope){
 	function take_snapshot() {
 		// take snapshot and get image data
 		Webcam.snap( function(data_uri) {
-			var oxford = require('project-oxford'),
-				client = new oxford.Client('59e8effcb05b4ab5b37dc2e0f3290315');
-			client.emotion.analyzeEmotion({
-				url: data_uri,
-			}).then(function (response) {
-				console.log(response);
+			$(function() {
+				var params = {
+					// Request parameters
+				};
+				$.ajax({
+					url: "https://api.projectoxford.ai/emotion/v1.0/recognize?" + $.param(params),
+					beforeSend: function(xhrObj){
+						// Request headers
+						xhrObj.setRequestHeader("Content-Type","application/json");
+						xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
+					},
+					type: "POST",
+					// Request body
+					data: data_uri,
+				})
+				.done(function(data) {
+					alert("success");
+				})
+				.fail(function() {
+					alert("error");
+				});
 			});
 		} );
 	}
