@@ -1,6 +1,5 @@
 var teleNex = angular.module('teleNex', []);
 teleNex.controller("MainController", function($scope){
-	$scope.test = 'Test';
 	$scope.randomEntry = function(){
 		console.log("test");
 		happiness.y.push(Math.random()*10);
