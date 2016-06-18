@@ -13,31 +13,31 @@ teleNex.controller("MainController", function($scope){
 	};
 
 	var happiness = {
-		y: [0],
+		y: [0, 0],
 		name: 'Happiness',
 		type: 'scatter'
 	};
 
 	var sadness = {
-		y: [0],
+		y: [0, 0],
 		name: 'Sadness',
 		type: 'scatter'
 	};
 
 	var fear = {
-		y: [0],
+		y: [0, 0],
 		name: 'Fear',
 		type: 'scatter'
 	};
 
 	var anger = {
-		y: [0],
+		y: [0, 0],
 		name: 'Anger',
 		type: 'scatter'
 	};
 
 	var neutral = {
-		y: [0],
+		y: [0, 0],
 		name: 'Neutral',
 		type: 'scatter'
 	};

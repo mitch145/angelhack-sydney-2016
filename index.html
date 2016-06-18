@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>LawyerScanner</title>
+	<title>teleNex</title>
 	<!-- Bootstrap and JQuery -->
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	<script src="bootstrap.min.js"></script>
@@ -19,11 +19,14 @@
 <body ng-app="teleNex" ng-controller="MainController as MainCtrl">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<h1>teleNex {{test}}</h1>
-				<button ng-click="randomEntry()">Test</button>
+			<div class="col-xs-12">
+				<h1 class="text-center">teleNex</h1>
+				<div id="myDiv" style=""></div>
 			</div>
-			<div id="myDiv" style=""></div>
+		</div>
+		<div class="col-md-12">
+			<br><br>
+			<button class="btn btn-default center-block text-center" ng-click="randomEntry()">Random Entry</button>
 		</div>
 	</div>
 
